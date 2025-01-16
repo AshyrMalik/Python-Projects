@@ -1,0 +1,22 @@
+You are required develop a single and multiplayer player TicToc game with following functionalities  At the start the game should display a welcome message and display following menu
+
+For multiplayer player mode press 1
+For single player mode press 2
+To exit press 3
+If user selects option 1 then following steps should be performed
+Ask the Player 1 to enter name and choose a symbol i.e. X or O
+Ask the Player 2 to enter name and then you should display the symbol (other then what has been selected by Player 1)
+Toss should be performed between the two Players. Player 1 should toss and Player 2 selects either Head or Tail.
+Display the grid along with position numbers from 1 to 9. Winner of the toss makes the first move by selecting the box number from the keyboard.
+The game ends when any of the player successfully forms the winning combination or all the moves have exhausted.
+A Message is displayed announcing the winner or draw.
+At the end of the game players should be asked whether they want to play another game if the player enters Y then the game restarts from step 1 otherwise the game ends.
+If user selects option 2 then following steps should be performed
+Ask the Player 1 to enter name and choose a symbol i.e. X or O
+Assign other symbol then what has been selected by Player 1 to the computer
+Toss should be performed between the Player 1 and Computer. Computer should toss and Player 1 selects either Head or Tail.
+Display the grid along with position numbers from 1 to 9. Winner of the toss makes the first move by selecting the box number from the keyboard.
+The game ends when any of the player successfully forms the winning combination or all the moves have exhausted.
+A Message is displayed announcing the winner or draw. (Here you have to ensure that computer moves are selected in such a way that either computer wins or game draws. In no situation Player 1 should win the game.)
+At the end of the game Player 1 should be asked whether he/she wants to play another game if the player enters Y then the game restarts from step 1 otherwise the game ends.
+If user selects option 3 then the game ends
