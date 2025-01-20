@@ -17,4 +17,4 @@ elif loc.__contains__("B"):
 else:
     maps[int(loc[1])-1][2]= "X"
 
-print(f"{line1}\n {line2}\n {line3}")
+print(f"{line1}\n{line2}\n{line3}")
