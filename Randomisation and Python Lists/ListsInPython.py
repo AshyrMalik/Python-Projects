@@ -18,6 +18,6 @@ states_of_pakistan.append("India")
 print(states_of_pakistan)
 
 
-picker = random.randint(0,len(states_of_pakistan))
+picker = random.randint(0,len(states_of_pakistan)-1)
 
 print("the one who is picked is: ", {states_of_pakistan[picker]})
