@@ -31,4 +31,10 @@ while(True):
 msg=(input("Type your message: "))
 shift=int(input("Enter the number which you want to shift: "))
 
-print(encrypt(msg,shift))
+    if direction=="encode":
+        encrypt(msg,shift)
+    elif direction=="decode":
+        decrypt(msg,shift)
+    else:
+        print("Closing Application")
+        break
