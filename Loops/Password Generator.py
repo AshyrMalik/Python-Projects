@@ -7,9 +7,9 @@ length= int(input("How long would you like your password to be: "))
 numbers=int(input("How many numbers would you like: "))
 sym=int(input("How many symbols would you like: "))
 
-password=""
-for i in range(1,sym+1):
-    password= password + symbols[random.randint(0,len(symbols))]
+password = ""
+for i in range(sym):
+    password += random.choice(symbols)  # Use random.choice() for simplicity
 
 for i in range(1,numbers+1):
     password= password + numbers_as_strings[random.randint(0,len(numbers_as_strings))]
