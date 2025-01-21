@@ -80,11 +80,10 @@ for i in range(len(chosen_word)):
 count=0
 print(list_of_lines)
 lives = 0
-i=0
-
 while True:
     print(hangman_stages[lives])
     user_guess = input("Guess a letter: ").lower()
+
     found= False
     for i in chosen_word:
         if i==user_guess:
@@ -100,6 +99,7 @@ while True:
 
     if count == len(chosen_word):
         print("You have won")
+        break
     if lives==6:
         print(hangman_stages[lives])
         break
