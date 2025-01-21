@@ -8,4 +8,7 @@ user_guess = input("Guess a letter: ")
 
 if chosen_word.contains(user_guess):
     print("You have guessed the right letter")
+else:
+    print("Wrong guess")
+    
 
