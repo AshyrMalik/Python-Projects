@@ -65,6 +65,7 @@ hangman_stages = [
            |
     =========
     """
+
 ]
 
 
@@ -78,20 +79,30 @@ for i in range(len(chosen_word)):
 
 count=0
 print(list_of_lines)
-lives = 6
+lives = 0
+i=0
 
-for i in chosen_word:
+while True:
+    print(hangman_stages[lives])
     user_guess = input("Guess a letter: ").lower()
+    found= False
+    for i in chosen_word:
+        if i==user_guess:
+            list_of_lines[count]=user_guess
+            print("right guess")
+            print(list_of_lines)
+            count+=1
+            found=True
 
-    if i==user_guess:
-        list_of_lines[count]=user_guess
-        print(list_of_lines)
-        count+=1
-    else:
-        lives-=1
-        count+=1
+    if not found:
+        print("wrong guess")
+        lives+=1
+
+    if count == len(chosen_word):
+        print("You have won")
+    if lives==6:
+        print(hangman_stages[lives])
+        break
 
 
-if count==len(chosen_word):
-    print("You have won")
 
