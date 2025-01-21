@@ -95,12 +95,14 @@ while True:
 
     if not found:
         print("wrong guess")
+        print(list_of_lines)
         lives+=1
 
     if count == len(chosen_word):
         print("You have won")
         break
     if lives==6:
+        print("You have lost")
         print(hangman_stages[lives])
         break
 
