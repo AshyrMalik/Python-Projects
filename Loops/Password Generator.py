@@ -20,4 +20,5 @@ for i in range(length - numbers - sym):
 password_list = list(password)  # Convert string to list
 random.shuffle(password_list)   # Shuffle the list in place
 password = ''.join(password_list)  # Join the shuffled list back into a string
-print("Your password is:", password)
+
+print("\n\n\n Your password is:", password)
