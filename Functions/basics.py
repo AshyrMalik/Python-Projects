@@ -12,3 +12,9 @@ def sum(a,b):
 
 print(sum(4,5)
 )
+
+def greet_with_name(name):
+    print("Hello",name)
+
+
+greet_with_name("ashar")
