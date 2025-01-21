@@ -19,5 +19,6 @@ for i in chosen_word:
         print("right")
     else:
         print("wrong")
+        count+=1
 
 
