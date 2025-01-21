@@ -14,8 +14,8 @@ for i in range(sym):
 for i in range(numbers):
     password += random.choice(numbers_as_strings)
 
-for i in range(length-numbers-sym+1):
-    password= password + alphabets[random.randint(0,len(alphabets))]
+for i in range(length - numbers - sym):
+    password += random.choice(alphabets)
 
 password_list = list(password)
 password= ''.join(random.shuffle(password_list))
