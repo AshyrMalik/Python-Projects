@@ -14,6 +14,14 @@ def encrypt(text,shift):
 
     return "".join(encrypted_text)
 
+def decrypt(text,shift):
+    decrypted_text=""
+    for letters in text:
+        position=alphabets.index(letters)
+        new_position = position - shift
+        decrypted_text+=(alphabets[new_position])
+    return decrypted_text
+
 direction=input("Type encode to encrypt the message \n"
       "Type decode to decrypt the message").lower()
 
