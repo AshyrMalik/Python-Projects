@@ -11,8 +11,8 @@ password = ""
 for i in range(sym):
     password += random.choice(symbols)  # Use random.choice() for simplicity
 
-for i in range(1,numbers+1):
-    password= password + numbers_as_strings[random.randint(0,len(numbers_as_strings))]
+for i in range(numbers):
+    password += random.choice(numbers_as_strings)
 
 for i in range(length-numbers-sym+1):
     password= password + alphabets[random.randint(0,len(alphabets))]
