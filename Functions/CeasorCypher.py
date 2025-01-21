@@ -22,8 +22,11 @@ def decrypt(text,shift):
         decrypted_text+=(alphabets[new_position])
     return decrypted_text
 
-direction=input("Type encode to encrypt the message \n"
-      "Type decode to decrypt the message").lower()
+while(True):
+    direction = input("Type encode to encrypt the message \n"
+                      "Type decode to decrypt the message\n"
+                      "Type anything else to exit\n"
+                      "Enter your choice: ").lower()
 
 msg=(input("Type your message: "))
 shift=int(input("Enter the number which you want to shift: "))
