@@ -17,6 +17,8 @@ for i in range(len(chosen_word)):
 for i in chosen_word:
     if i==user_guess:
         print("right")
+        list_of_lines[count]=user_guess
+        count+=1
     else:
         print("wrong")
         count+=1
