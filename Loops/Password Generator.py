@@ -1,4 +1,5 @@
 import random
+
 symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '[', ']', '{', '}', ';', ':', "'", '"', '<', '>', ',', '.', '?', '/', '|', '\\', '~', '`']
 numbers_as_strings = [str(i) for i in range(10)]
 alphabets = [chr(i) for i in range(65, 91)] + [chr(i) for i in range(97, 123)]
