@@ -1,6 +1,74 @@
 import random
 
 word_list = ["ashar","malik","khan"]
+hangman_stages = [
+    """
+      ------
+      |    |
+           |
+           |
+           |
+           |
+    =========
+    """,
+    """
+      ------
+      |    |
+      O    |
+           |
+           |
+           |
+    =========
+    """,
+    """
+      ------
+      |    |
+      O    |
+      |    |
+           |
+           |
+    =========
+    """,
+    """
+      ------
+      |    |
+      O    |
+     /|    |
+           |
+           |
+    =========
+    """,
+    """
+      ------
+      |    |
+      O    |
+     /|\   |
+           |
+           |
+    =========
+    """,
+    """
+      ------
+      |    |
+      O    |
+     /|\   |
+     /     |
+           |
+    =========
+    """,
+    """
+      ------
+      |    |
+      O    |
+     /|\   |
+     / \   |
+           |
+    =========
+    """
+]
+
+# Example: Displaying the last stage (fully hanged)
+print(hangman_stages[-1])
 
 chosen_word = random.choice(word_list)
 print(chosen_word)
