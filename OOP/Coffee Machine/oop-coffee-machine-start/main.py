@@ -3,7 +3,7 @@ from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
 menu = Menu()
-coffee_maker = CoffeeMaker()
+coffee_maker = CoffeeMaker(1000,100,1000)
 money_machine = MoneyMachine()
 # print(menu.get_items())
 # print(menu.find_drink(input()))
@@ -12,7 +12,7 @@ money_machine = MoneyMachine()
 # #
 
 while (True):
-    choice = input(f"What will you like to buy: ({menu.get_items()}) ")
+    choice = input(f"\nWhat will you like to buy: ({menu.get_items()}) ")
 
     if choice=="off":
         break
@@ -24,5 +24,5 @@ while (True):
         can_make = coffee_maker.is_resource_sufficient(drink)
         if can_make:
             if money_machine.make_payment(drink.cost):
-                coffee_maker.make_coffee(choice)
+                coffee_maker.make_coffee(drink)
 
