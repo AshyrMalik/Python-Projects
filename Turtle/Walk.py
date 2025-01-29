@@ -1,14 +1,25 @@
 import turtle as t
 import random
 
-timm= t.Turtle()
+def color_picker():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    return (r, g, b)
 
+t.colormode(255)
+timm = t.Turtle()
+timm.pensize(15)
+timm.speed("fastest")
 
+# Directions
+directions = [0, 90, 180, 270]
 
-colors = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
-direction = [90,180,270,0]
+# Random walk loop
 for _ in range(300):
-    timm.color(random.choice(colors))
+    timm.color(color_picker())
     timm.forward(30)
-    timm.setheading(random.choice(direction))
+    timm.setheading(random.choice(directions))
 
+# Keep the window open
+t.done()
