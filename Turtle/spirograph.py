@@ -12,7 +12,7 @@ def color_picker():
     return (r, g, b)
 
 def draw_spirograph(size_of_gap):
-    for i in range(200):
+    for i in range(int(360/size_of_gap)):
         timm.color(color_picker())
         timm.circle(100)
         timm.setheading(timm.heading()+ size_of_gap)
@@ -20,3 +20,5 @@ def draw_spirograph(size_of_gap):
 
 
 draw_spirograph(5)
+screen =t.Screen()
+screen.exitonclick()
