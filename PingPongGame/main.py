@@ -1,5 +1,8 @@
+import time
 from turtle import Turtle,Screen
-
+from PingPongGame.Scoreboard import ScoreBoard
+from PingPongGame.ball import Ball
+from PingPongGame.paddle import Paddle
 
 screen = Screen()
 screen.bgcolor("black")
@@ -7,35 +10,34 @@ screen.setup(800,600)
 screen.title("Ping Pong")
 screen.tracer(0)
 
-paddle1 = Turtle()
-paddle1.color("white")
-paddle1.shape("square")
-paddle1.shapesize(stretch_wid=5,stretch_len=1)
-paddle1.penup()
-paddle1.goto(x=-350,y=0)
+paddle1= Paddle(-350)
+paddle2= Paddle(350)
+score=ScoreBoard()
 
-paddle2 = Turtle()
-paddle2.color("white")
-paddle2.shape("square")
-paddle2.shapesize(stretch_wid=5,stretch_len=1)
-paddle2.penup()
-paddle2.goto(x=350,y=0)
-
-def go_up():
-    new_corr=paddle1.ycor()+20
-    paddle1.goto(paddle1.xcor(),new_corr)
-
-def go_down():
-    new_corr=paddle.ycor()-20
-    paddle.goto(paddle.xcor(),new_corr)
-
+ball= Ball()
 screen.listen()
-screen.onkey(key="w",fun=go_up)
-screen.onkey(key="s",fun=go_down)
+screen.onkey(key="w",fun=paddle1.go_up)
+screen.onkey(key="s",fun=paddle1.go_down)
+screen.onkey(key="Up",fun=paddle2.go_up)
+screen.onkey(key="Down",fun=paddle2.go_down)
 is_on = True
 while is_on:
+    time.sleep(0.1)
     screen.update()
+    ball.move()
+    if ball.ycor()>280 or ball.ycor()<-280:
+        ball.bounce_y()
 
+    if (ball.xcor() > 320 and ball.distance(paddle2) < 50) or (ball.xcor() < -320 and ball.distance(paddle1) < 50):
+        ball.bounce_x()
 
+    if ball.xcor()<-380:
+        score.update_lscore()
+        score.update_score()
+        ball.reset()
+    if ball.xcor()>380:
+        score.update_rscore()
+        score.update_score()
+        ball.reset()
 
 screen.exitonclick()
