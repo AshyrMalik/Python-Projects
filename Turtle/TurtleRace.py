@@ -5,6 +5,8 @@ import random
 
 screen = Screen()
 screen.setup(width=500,height=400)
+screen.bgcolor("black")
+
 
 colors=["red","orange","blue","purple","green","black"]
 y_coordinate = 150
