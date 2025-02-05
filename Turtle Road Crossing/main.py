@@ -10,6 +10,7 @@ screen.tracer(0)
 
 player = Player()
 car_manager = CarManager()
+scoreboard = Scoreboard()
 
 screen.listen()
 screen.onkey(player.go_up,"w")
@@ -33,3 +34,7 @@ while game_is_on:
 
     count+=1
     car_manager.move()
+
+
+
+screen.exitonclick()
