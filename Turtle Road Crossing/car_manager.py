@@ -1,3 +1,6 @@
+import random
+from turtle import Turtle
+
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
@@ -13,7 +16,8 @@ class CarManager:
         new_car.penup()
         new_car.color(random.choice(COLORS))
         new_car.goto(300, random.randint(-250, 250))  # Keep cars within visible range
-        new_car.setheading(180)  # Face left
+        # new_car.setheading(180)  # Face left
+        #
         self.all_cars.append(new_car)
 
     def move(self):
