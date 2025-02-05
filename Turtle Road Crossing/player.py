@@ -11,7 +11,8 @@ class Player(Turtle):
         self.penup()
         self.goto(STARTING_POSITION)
         self.shape("turtle")
+        self.left(90)
 
     def go_up(self):
-        new_xcor = self.xcor()+MOVE_DISTANCE
-        self.goto(x=new_xcor,y=self.xcor())
+        new_ycor = self.ycor()+MOVE_DISTANCE
+        self.goto(x=self.xcor(),y=new_ycor)
