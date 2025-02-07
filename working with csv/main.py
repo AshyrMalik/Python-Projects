@@ -9,3 +9,19 @@
 #             temp_list.append(row[1])
 #
 #     print(temp_list)
+
+import pandas
+import pandas as pd
+
+data = pandas.read_csv("weather_data.csv")
+
+# print(data)
+# print (data["temp"].max())
+# print(data["temp"].mean())
+# print(data["temp"].mode())
+#
+# monday = data[data["day"]=="Monday"]
+# print(monday)
+
+max_temp = data[data["temp"]==data['temp'].max()]
+print(max_temp)

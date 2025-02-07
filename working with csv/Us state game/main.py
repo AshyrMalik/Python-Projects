@@ -16,7 +16,6 @@ list_of_states = data["state"].str.lower().tolist()
 
 # Game loop
 is_on = True
- # Initialize count
 guessed_list=[]
 while is_on:
 
@@ -38,5 +37,6 @@ while is_on:
         continue
 
     is_on = False
+
 
 turtle.mainloop()

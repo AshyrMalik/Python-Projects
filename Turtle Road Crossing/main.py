@@ -24,7 +24,7 @@ while game_is_on:
         car_manager.create_car()
         count=1
     for car in car_manager.all_cars:
-        if car.distance(player) <25:
+        if car.distance(player) <30:
             game_is_on= False
 
     if player.ycor()>300:
