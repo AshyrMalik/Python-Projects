@@ -28,10 +28,15 @@ while is_on:
         tim = Turtle()
         tim.penup()
         tim.hideturtle()
-        guessed_state= data[data["state"].lower()==user_guess]
-        tim.goto(guessed_state.x,guessed_state.y)
-        tim.write(f"{user_guess}", align="center", font=("Courier", 7, "normal"))
-        count=0
+
+        # Get the row for the guessed state
+        guessed_state = data[data["state"].str.lower() == user_guess]
+
+        # Move turtle to the guessed state's position
+        tim.goto(int(guessed_state["x"].iloc[0]), int(guessed_state["y"].iloc[0]))
+        tim.write(f"{user_guess.title()}", align="center", font=("Courier", 10, "normal"))
+
+        count = 0  # Reset count when a correct answer is given
 
     if count == 1:
         is_on = False
