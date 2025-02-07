@@ -22,14 +22,15 @@ is_on = True
 
 while is_on:
     user_guess = screen.textinput(title="Name a state", prompt="Enter another state name that you know  ")
-    count=1
-    for row in data:
-        if user_guess == row["state"]:
-            tim = Turtle()
-            tim.penup()
-            tim.hideturtle()
-            tim.goto(row["x"],row["y"])
-            count=0
+
+    if user_guess in list_of_states:
+        tim = Turtle()
+        tim.penup()
+        tim.hideturtle()
+        guessed_state= data[data["state"].lower()==user_guess]
+        tim.goto(guessed_state.x,guessed_state.y)
+        tim.write(f"{user_guess}", align="center", font=("Courier", 7, "normal"))
+        count=0
 
     if count == 1:
         is_on = False
