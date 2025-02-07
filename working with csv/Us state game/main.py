@@ -16,7 +16,8 @@ turtle.shape(image)
 # turtle.onscreenclick(get_mouse_click_coor)
 
 data = pd.read_csv("50_states.csv")
-
+states = data["states"]
+list_of_states =states.list().lower()
 
 is_on = True
 
