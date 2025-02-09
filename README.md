@@ -1,1 +1,1 @@
-this repo contains puthon projects that i have completed 
+this repo contains python projects that i have completed 
