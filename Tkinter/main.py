@@ -15,16 +15,18 @@ my_label.pack()
 #     return sum
 #
 # print(add(5,5,5,5,5))
+input = Entry()
+input.pack()
+
 def button_click():
-    my_label.config(text="I got clicked")
+    my_label.config(text=input.get())
 
 
 button = Button(text="Wwer",command=button_click)
 button.pack()
 
-input = Entry()
-input.pack()
-input.get()
+
+
 
 
 window.mainloop()
