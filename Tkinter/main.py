@@ -1,21 +1,30 @@
-import tkinter
+from tkinter import *
 
-# window = tkinter.Tk()
-# window.title("My first Gui")
-# window.minsize(width=500, height= 300)
+window = Tk()
+window.title("My first Gui")
+window.minsize(width=500, height= 300)
+
+my_label = Label(text="heyyyyyyy")
+my_label.pack()
+
+# def add(*args):
+#     sum = 0
+#     for num in args:
+#         sum+=num
 #
-# my_label = tkinter.Label(text="Hello world")
-# my_label.pack(side ="left")
+#     return sum
 #
+# print(add(5,5,5,5,5))
+def button_click():
+    my_label.config(text="I got clicked")
 
-def add(*args):
-    sum = 0
-    for num in args:
-        sum+=num
 
-    return sum
+button = Button(text="Wwer",command=button_click)
+button.pack()
 
-print(add(5,5,5,5,5))
+input = Entry()
+input.pack()
+input.get()
 
-#
-# window.mainloop()
+
+window.mainloop()
