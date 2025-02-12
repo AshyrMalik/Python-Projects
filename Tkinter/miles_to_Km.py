@@ -3,7 +3,7 @@ from tkinter import *
 def miles_to_km():
     miles = miles_input.get()
     km = float(miles) * 1.609
-    return km
+    km_result_label.config(text=km)
 
 window=Tk()
 window.title("Mile to Km Converter")
@@ -23,7 +23,7 @@ km_result_label.grid(column=1,row=1)
 km_label = Label(text="km")
 km_label.grid(column=2,row=1)
 
-calculate_buttons =Button(text="Calculate")
+calculate_buttons =Button(text="Calculate",command=miles_to_km)
 calculate_buttons.grid(column=1,row=3)
 
 
