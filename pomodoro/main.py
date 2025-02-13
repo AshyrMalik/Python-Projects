@@ -45,6 +45,14 @@ def count_down(count):
     if count>0:
         windows.after(1000,count_down,count-1)
 
+    else:
+        mark =""
+        for _ in range(math.floor(reps/2)):
+            mark+="+"
+
+        tick_label.config(text=mark)
+        start_count()
+
 # ---------------------------- UI SETUP ------------------------------- #
 windows = Tk()
 windows.title("Pomodoro")
