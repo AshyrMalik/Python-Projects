@@ -14,7 +14,26 @@ LONG_BREAK_MIN = 20
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_count():
-    count_down(5*60)
+    global reps
+    short_break =SHORT_BREAK_MIN*60
+    big_break= LONG_BREAK_MIN*60
+    work_time =WORK_MIN*60
+
+    reps +=1
+    if reps == 8:
+        print("wwe")
+        count_down(big_break)
+
+    elif reps %2 == 0:
+        print("raw")
+        count_down(short_break)
+
+    else:
+        print(work_time)
+        print(big_break)
+        print("smack")
+        count_down(work_time)
+
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 def count_down(count):
     count_min = math.floor(count/60)
