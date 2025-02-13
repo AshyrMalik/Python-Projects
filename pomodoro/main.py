@@ -11,7 +11,11 @@ SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 
 # ---------------------------- TIMER RESET ------------------------------- #
-
+def reset_timer():
+    windows.after_cancel(timer)
+    canvas.itemconfig(timer_text,text="00:00")
+    text_label.config(text="Timer",fg=GREEN)
+    tick_label.config(text="")
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_count():
     global reps
