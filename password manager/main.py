@@ -1,6 +1,10 @@
 from tkinter import *
 from tkinter import messagebox
+import random
+import pyperclip
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
+#Password Generator Project
+
 
 def generate_password():
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
@@ -29,8 +33,9 @@ def generate_password():
     password = ""
     for char in password_list:
       password += char
+    pyperclip.copy(password)
+    password_entry.insert(0,password)
 
-    print(f"Your password is: {password}")
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
     website = website_entry.get()
@@ -75,9 +80,10 @@ email_entry.grid(row=2, column=1, columnspan=2, sticky="w")
 email_entry.insert(0, "asharmalik6231@gmail.com")
 
 password_entry = Entry(width=21)
+
 password_entry.grid(row=3, column=1, sticky="w")
 
-gen_password = Button(text="Generate", font=("Arial", 10, "bold"), bg="#ffcc00", fg="black", padx=5)
+gen_password = Button(text="Generate", font=("Arial", 10, "bold"), bg="#ffcc00", fg="black", padx=5,command=generate_password)
 gen_password.grid(row=3, column=2, sticky="w")
 
 add_button = Button(text="Add", width=36, font=("Arial", 10, "bold"), bg="#4caf50", fg="white", command=save)
