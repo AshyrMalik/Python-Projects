@@ -1,0 +1,3 @@
+website | email | password
+ww |  asharmalik6231@gmail.com| 123
+234 |  asharmalik6231@gmail.com| 123
